@@ -5,17 +5,24 @@ import org.clapper.classutil.ClassFinder
 
 object Main extends App {
 
-  val classes = ClassFinder.concreteSubclasses(
-    classOf[com.google.caliper.SimpleBenchmark].getName,
-    ClassFinder() getClasses()
-  )
-  classes.foreach { info =>
-    val name = info.name
-    println("running " + name)
-    trapExits {
-      Runner main ((name :: args.toList): _*)
-    }
-  }
+  // val classes = ClassFinder.concreteSubclasses(
+  //   classOf[com.google.caliper.SimpleBenchmark].getName,
+  //   ClassFinder() getClasses()
+  // )
+  // classes.foreach { info =>
+  //   val name = info.name
+  //   println("running " + name)
+  //   trapExits {
+  //     Runner main ((name :: args.toList): _*)
+  //   }
+  // }
+
+  val marks = List(
+    classOf[PrependBenchmark],
+    classOf[AppendBenchmark]
+  ).map { _.getName }
+
+  for (mark <- marks) Runner main ((mark :: args.toList): _*)
 
   def trapExits(thunk: => Unit): Unit = {
     val originalSecManager = System.getSecurityManager
