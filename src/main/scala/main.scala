@@ -30,7 +30,6 @@ object Main extends App {
       thunk
     } catch {
       case _: NoExitsException =>
-      case e => throw e
     } finally {
       System setSecurityManager originalSecManager
     }

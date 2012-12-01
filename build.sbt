@@ -24,9 +24,9 @@ scmInfo := Some(
 )
 
 /* scala versions and options */
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0-RC3"
 
-crossScalaVersions := Seq("2.9.1")
+// crossScalaVersions := Seq("2.9.1")
 
 offline := false
 
@@ -46,13 +46,13 @@ libraryDependencies ++= Seq (
   //utilities
   "com.google.code.java-allocation-instrumenter" % "java-allocation-instrumenter" % "2.0",
   "com.google.code.gson" % "gson" % "1.7.1",
-  "org.clapper" %% "classutil" % "0.4.6",
+  "org.clapper" %% "classutil" % "1.0.1",
   //being tested
-  "org.scalaz" %% "scalaz-core" % "7.0.0-M4",
-  "org.scalaz" %% "scalaz-effect" % "7.0.0-M4",
+  // "org.scalaz" %% "scalaz-core" % "7.0.0-M4",
+  // "org.scalaz" %% "scalaz-effect" % "7.0.0-M4",
   // "org.scalaj" %% "scalaj-collection" % "1.2",
-  "com.google.guava" % "guava" % "13.0.1",
-  "com.chuusai" %% "shapeless" % "1.2.2"
+  // "com.chuusai" %% "shapeless" % "1.2.2",
+  "com.google.guava" % "guava" % "13.0.1"
 )
 
 /* sbt behavior */
