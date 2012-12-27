@@ -11,6 +11,6 @@ I need macros to have a relatively DRY code base without skewing the test result
 Use the provided sbt script or bad things will happen.
 
 ```sh
-./sbt run
+./sbt
 > run
 ```
