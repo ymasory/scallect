@@ -24,7 +24,7 @@ scmInfo := Some(
 )
 
 /* scala versions and options */
-scalaVersion := "2.10.0-RC3"
+scalaVersion := "2.10.0"
 
 // crossScalaVersions := Seq("2.9.1")
 
